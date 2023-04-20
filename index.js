@@ -17,11 +17,6 @@ let questionsList = [
     },
     {
         type: "input",
-        name: "Table of Contents",
-        message: "Add table of content if necessary",
-    },
-    {
-        type: "input",
         name: "Installation",
         message: "What are some steps for Installation?",
     },
@@ -34,7 +29,7 @@ let questionsList = [
         type: "input",
         name: "License",
         message: "What type of license was chosen for your project?",
-        choices: ["Apache License 2.0", "Mozilla Public License 2.0", "MIT License", "No License"],
+        choices: ["Mozilla Public License 2.0", "MIT License", "No License"],
     },
     {
         type: "input",
@@ -60,7 +55,7 @@ let questionsList = [
 ]
 
 function init() {
-    inqu.prompt(questions).then((data) => {
+    inqu.prompt(questionsList).then((data) => {
         console.log(data)
         fs.writeFile("GeneratedREADME/GeneratedREADME.md", generateMarkdown(data), (err) => err ? console.error(err) : console.log("Success!"))})
     }
