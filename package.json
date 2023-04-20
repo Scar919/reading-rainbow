@@ -1,0 +1,23 @@
+{
+  "name": "reading-rainbow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scar919/reading-rainbow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scar919/reading-rainbow/issues"
+  },
+  "homepage": "https://github.com/Scar919/reading-rainbow#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
