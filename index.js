@@ -1,9 +1,11 @@
 
 const fs = require("fs");
-const inqu= require("inquirer");
+const inquirer = require("inquirer");
 const generateMarkdown = require('./generateMarkdown');
 
-let questionsList = [
+//questions list 
+const questionsList = [
+   
   
     {
         type: "input",
@@ -51,12 +53,34 @@ let questionsList = [
         name: "Email",
         message: "what is your email?",
     },
-
 ]
+//]);
+//};
+
+//const writeFile = data => {
+  //  fs.writeFile('README.md', data, err => {
+    //    if (err) {
+      //      console.log(err);
+        //    return;
+        //}else{
+          //  console.log("your README has been successfully created!");
+       //}
+    //})
+    //};
+    //questions()
+    //.then(answers => {
+      //  return generateMarkdown(answers);
+    //})
+    //.then(data => {
+      //  return writeFile(data);
+   // })
+   // .catch(err =>{
+     //   console.log(err)
+    //})
 
 function init() {
-    inqu.prompt(questionsList).then((data) => {
-        console.log(data)
-        fs.writeFile("GeneratedREADME/GeneratedREADME.md", generateMarkdown(data), (err) => err ? console.error(err) : console.log("Success!"))})
-    }
+inquirer.prompt(questionsList).then((data) => {
+    console.log(data)
+      fs.writeFile("GeneratedREADME/GeneratedREADME.md", generateMarkdown(data), (err) => err ? console.error(err) : console.log("Success!"))})
+  }
 init();

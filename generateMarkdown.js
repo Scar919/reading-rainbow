@@ -15,12 +15,28 @@ function renderLicenseBadge(data) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
-  
-}
+  var license = `${data.license}`;
+  var licenseLink = "";
+  if (license == "Mozilla Public License 2.0"){
+    var licenseLink = "(https://chooselicense.com/licenses/mp1-2.0/)";
+    return licenseLink;
+  } else if (license == "MIT License"){
+    var licenseLink = "(https://chooselicense.com/licenses-mit/)";
+    return licenseLink;
+  }
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-//unction renderLicenseSection(license) {}
+function renderLicenseSection(data) {
+  var license = `${data.license}`;
+  if (license =="No License"){
+    var license = "";
+    return license;
+  }else{
+    return license;
+  }
+};
 
 // TODO: Create a function to generate markdown for README
 
@@ -28,10 +44,16 @@ function renderLicenseLink(data) {
 
 
 function generateMarkdown(data) {
-  return `# ${data.title}
+  var license = renderLicenseSection(data);
+  var licenseBadge = renderLicenseBadge(data);
+  var licenseLink = renderLicenseLink(data);
+  return `# ${licenseBadge} ${license} ${licenseLink}
+
+  ## Title
+  ${data.Title}
 
   ## Description
-  ${data.description}
+  ${data.Description}
 
   ## Table of Contents
   * [Installation](#Installation)
