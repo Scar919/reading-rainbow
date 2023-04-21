@@ -1,10 +1,10 @@
 # undefined undefined undefined
 
   ## Title
-  cll readme
+  Title
 
   ## Description
-  this is a description
+  short description
 
   ## Table of Contents
   * [Installation](#Installation)
@@ -16,21 +16,21 @@
   * [Email](#Email)
   
   # Installation
-  here is how you install
+  this is how you install
 
   # Usage
-  here are some examples
+  ex
 
 
   # Contributing
-  here is how you can contribute
+  Test
 
   # Tests
   test
 
 
   # Github
-  git
+  Git
 
   # Email
   @email
