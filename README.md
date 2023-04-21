@@ -6,7 +6,7 @@ The motivation behind this project was to make an easier and quicker way for one
 
 
 ![GIF](./assets/GIF.gif)
-![IMG](./assets/IMG.png)
+
 
 ## Table of Contents
 
